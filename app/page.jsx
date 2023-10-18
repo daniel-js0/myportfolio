@@ -8,7 +8,7 @@ export default function Home() {
     <main>
       <Navbar />
    
-     <div className=" w-[89%] lg:w-[70%] mx-auto pt-12 bg-slate-30 ">
+     <div className=" w-[89%] lg:w-[80%] mx-auto pt-12 bg-slate-30 ">
                <p className="text-lg text-teal-500 md:text-xl  font-bold pt-20">Hi there, &#x1F44B; i'm</p>
                <h1 className="text-4xl tracking-wider md:text-7xl font-black text-slate-100 mt-3 md:mt-12 md:tracking-wide">Olagbegi 
                  <span className="ml-4 underline text-teal-500 ">Daniel.</span>
