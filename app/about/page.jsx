@@ -1,9 +1,18 @@
-import React from 'react'
+"use client"
 import Navbar from '../components/Navbar'
 import Image from 'next/image'
 import Footer from '../components/Footer'
+import { useState } from 'react'
 
 const page = () => {
+           const [hover, setHover] = useState(false);
+
+           function handleHover(){
+            setHover(true)
+           }
+           function handleLeave(){
+            setHover(false)
+           }
   return (
   <main>
     <Navbar/>
@@ -25,26 +34,26 @@ const page = () => {
 
             
                <div className={`relative pb-8 w-[95%] md:w-[55%] lg:w-[42%] mx-auto lg:ml-1 h-[30rem] max-[281px]:mt-32 mt-8 md:mt-24 lg:mt-60 xl:mt-44 md:pt-0 pt-12 bg-gray-30`}>
-                    <Image className='hidden md:flex grayscale hover:grayscale-0 absolute rounded-xl delay-100 duration-700 hover:scale-105
+                    <Image onMouseEnter={handleHover} onMouseLeave={handleLeave} className='hidden md:flex grayscale hover:grayscale-0 absolute rounded-xl delay-100 duration-700 hover:scale-105
                            md:h-[90%] md:w-[90%] lg:w-[80%] xl:w-[65%] start-7 z-10 border-2 border-sky-900 ' 
                       src='/me1.png' width={810} height={510} quality={100}/>
                     <div className='flex justify-center '>
                     <Image className='md:hidden grayscale absolute hover:grayscale-0 rounded-full w-72 h-72  z-10 border-8 border-teal-900
                     delay-100 duration-700 hover:scale-105' src='/me.png' width={810} height={510} quality={100}/>
 
-                    <div className=' md:hidden w-80 h-80 absolute top-8 border-[12px] border-teal-700  rounded-full  z-0 bg-gray-00' ></div>
-                    <div className=' md:hidden w-[22rem] h-[22rem] absolute  top-[1rem]  border-[16px] border-teal-100  rounded-full  z-0 bg-gray-00' ></div>
+                    <div className=' md:hidden w-80 h-80 absolute top-8 border-[12px] border-teal-200  rounded-full  z-0 bg-gray-00' ></div>
+                    {/* <div className=' md:hidden w-[22rem] h-[22rem] absolute  top-[1rem]  border-[6px] border-teal-100  rounded-full  z-0 bg-gray-00' ></div> */}
                    
                     </div>
                     <div className='absolute hidden md:flex w-[80%] md:w-[90%] lg:w-[80%] xl:w-[65%] h-[70%] md:h-[90%] rounded-xl z-0 border border-gray-200 top-16 md:top-5 start-12'></div>
                      
-                    <svg className='absolute hidden md:flex -end-6 top-2 lg:end-5 xl:end-[23.5%]' width="33" height="108" viewBox="0 0 35 110" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="5" cy="5" r="5" fill="#2295F2" fill-opacity="0.31"></circle><circle cx="5" cy="30" r="5" fill="#2295F2" fill-opacity="0.31"></circle><circle cx="5" cy="55" r="5" fill="#2295F2" fill-opacity="0.31"></circle><circle cx="5" cy="80" r="5" fill="#2295F2" fill-opacity="0.31"></circle><circle cx="5" cy="105" r="5" fill="#2295F2" fill-opacity="0.31"></circle><circle cx="30" cy="5" r="5" fill="#2295F2" fill-opacity="0.31"></circle><circle cx="30" cy="30" r="5" fill="#2295F2" fill-opacity="0.31"></circle><circle cx="30" cy="55" r="5" fill="#2295F2" fill-opacity="0.31"></circle><circle cx="30" cy="80" r="5" fill="#2295F2" fill-opacity="0.31"></circle><circle cx="30" cy="105" r="5" fill="#2295F2" fill-opacity="0.31"></circle></svg>
+                    <svg className={`absolute hidden xl:flex -end-6 top-2 lg:end-5 xl:end-[31.5%] delay-150 duration-500 ${hover === true ? 'translate-x-14 ':'translate-x-0'}`} width="33" height="108" viewBox="0 0 35 110" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="5" cy="5" r="5" fill="#2295F2" fill-opacity="0.31"></circle><circle cx="5" cy="30" r="5" fill="#2295F2" fill-opacity="0.31"></circle><circle cx="5" cy="55" r="5" fill="#2295F2" fill-opacity="0.31"></circle><circle cx="5" cy="80" r="5" fill="#2295F2" fill-opacity="0.31"></circle><circle cx="5" cy="105" r="5" fill="#2295F2" fill-opacity="0.31"></circle><circle cx="30" cy="5" r="5" fill="#2295F2" fill-opacity="0.31"></circle><circle cx="30" cy="30" r="5" fill="#2295F2" fill-opacity="0.31"></circle><circle cx="30" cy="55" r="5" fill="#2295F2" fill-opacity="0.31"></circle><circle cx="30" cy="80" r="5" fill="#2295F2" fill-opacity="0.31"></circle><circle cx="30" cy="105" r="5" fill="#2295F2" fill-opacity="0.31"></circle></svg>
                         
-                    <svg className='absolute hidden md:flex  bottom-12 -start-4 lg:-start-[2%]' width="33" height="108" viewBox="0 0 35 110" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="5" cy="5" r="5" fill="#2295F2" fill-opacity="0.31"></circle><circle cx="5" cy="30" r="5" fill="#2295F2" fill-opacity="0.31"></circle><circle cx="5" cy="55" r="5" fill="#2295F2" fill-opacity="0.31"></circle><circle cx="5" cy="80" r="5" fill="#2295F2" fill-opacity="0.31"></circle><circle cx="5" cy="105" r="5" fill="#2295F2" fill-opacity="0.31"></circle><circle cx="30" cy="5" r="5" fill="#2295F2" fill-opacity="0.31"></circle><circle cx="30" cy="30" r="5" fill="#2295F2" fill-opacity="0.31"></circle><circle cx="30" cy="55" r="5" fill="#2295F2" fill-opacity="0.31"></circle><circle cx="30" cy="80" r="5" fill="#2295F2" fill-opacity="0.31"></circle><circle cx="30" cy="105" r="5" fill="#2295F2" fill-opacity="0.31"></circle></svg>
+                    <svg className={`absolute hidden xl:flex  bottom-12 -start-4 lg:start-[6%] delay-150 duration-500 ${hover === true ?'-translate-x-14':'translate-x-0'}`} width="33" height="108" viewBox="0 0 35 110" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="5" cy="5" r="5" fill="#2295F2" fill-opacity="0.31"></circle><circle cx="5" cy="30" r="5" fill="#2295F2" fill-opacity="0.31"></circle><circle cx="5" cy="55" r="5" fill="#2295F2" fill-opacity="0.31"></circle><circle cx="5" cy="80" r="5" fill="#2295F2" fill-opacity="0.31"></circle><circle cx="5" cy="105" r="5" fill="#2295F2" fill-opacity="0.31"></circle><circle cx="30" cy="5" r="5" fill="#2295F2" fill-opacity="0.31"></circle><circle cx="30" cy="30" r="5" fill="#2295F2" fill-opacity="0.31"></circle><circle cx="30" cy="55" r="5" fill="#2295F2" fill-opacity="0.31"></circle><circle cx="30" cy="80" r="5" fill="#2295F2" fill-opacity="0.31"></circle><circle cx="30" cy="105" r="5" fill="#2295F2" fill-opacity="0.31"></circle></svg>
                         
-                    <svg className='absolute hidden md:flex  -top-8 -start-6 lg:-start-[3%]' width="75" height="75" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" ><g opacity="0.2"><path d="M34.5601 36.8001H8.64014V28.4001H26.2401V10.5601H34.5601V36.8001Z" fill="#7913E5"></path><path d="M72.1602 36.8001H46.2402V10.5601H54.5602V28.4001H72.1602V36.8001Z" fill="#7913E5"></path><path d="M35.6798 69.6001H27.3598V51.7601H9.75977V43.3601H35.6798V69.6001Z" fill="#7913E5"></path><path d="M54.5602 69.6001H46.2402V43.3601H72.1602V51.7601H54.5602V69.6001Z" fill="#7913E5"></path></g></svg>
+                    <svg className={`absolute hidden xl:flex  -top-2 -start-6 xl:start-[4%] delay-150 duration-500 ${hover === true ?'-translate-x-14 -top-10 xl:start-3':'translate-x-0'}`} width="75" height="75" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" ><g opacity="0.2"><path d="M34.5601 36.8001H8.64014V28.4001H26.2401V10.5601H34.5601V36.8001Z" fill="#7913E5"></path><path d="M72.1602 36.8001H46.2402V10.5601H54.5602V28.4001H72.1602V36.8001Z" fill="#7913E5"></path><path d="M35.6798 69.6001H27.3598V51.7601H9.75977V43.3601H35.6798V69.6001Z" fill="#7913E5"></path><path d="M54.5602 69.6001H46.2402V43.3601H72.1602V51.7601H54.5602V69.6001Z" fill="#7913E5"></path></g></svg>
                                             
-                    <svg className="absolute hidden md:flex  -end-5 bottom-7 h-12 w-12 lg:end-5  xl:end-[23.5%] bg-rose-500 opacity-10" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"  viewBox="0 0 16 16"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-8 3a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>      
+                    <svg className={`absolute hidden xl:flex  -end-5 bottom-14 h-12 w-12 lg:end-5  xl:end-[31.5%] bg-rose-500 opacity-10 delay-150 duration-500 ${hover === true ? 'translate-x-14 bottom-8':'translate-x-0'}`} xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"  viewBox="0 0 16 16"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-8 3a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>      
                </div>
           </div>
 
@@ -53,10 +62,10 @@ const page = () => {
                <p className='text-gray-300 font-semibold text-lg lg:text-xl text-center mt-3'> Here are some technologies i am using or have used recently</p>
           </div>
              
-          <div className='w-[90%] h-[32rem] mx-auto mt-12'>
+          <div className='w-[90%] h-[32rem] md:h-[45rem] mx-auto mt-12'>
               <div className=' w-[100%] h-[100%] mx-auto  grid max-[283px]:grid-col-2 grid-cols-3 items-center justify-items-center'>
 
-                <div className=' h-24 w-[100%] bg-slate-900 rounded-lg '>
+                <div className=' h-24 w-[50%] md:h-[80%]  bg-slate-900 rounded-lg '>
                   <svg className='w-14 h-14 mx-auto pt-3' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><g fill="#61DAFB"><circle cx="64" cy="64" r="11.4"/><path d="M107.3 45.2c-2.2-.8-4.5-1.6-6.9-2.3.6-2.4 1.1-4.8 1.5-7.1 2.1-13.2-.2-22.5-6.6-26.1-1.9-1.1-4-1.6-6.4-1.6-7 0-15.9 5.2-24.9 13.9-9-8.7-17.9-13.9-24.9-13.9-2.4 0-4.5.5-6.4 1.6-6.4 3.7-8.7 13-6.6 26.1.4 2.3.9 4.7 1.5 7.1-2.4.7-4.7 1.4-6.9 2.3C8.2 50 1.4 56.6 1.4 64s6.9 14 19.3 18.8c2.2.8 4.5 1.6 6.9 2.3-.6 2.4-1.1 4.8-1.5 7.1-2.1 13.2.2 22.5 6.6 26.1 1.9 1.1 4 1.6 6.4 1.6 7.1 0 16-5.2 24.9-13.9 9 8.7 17.9 13.9 24.9 13.9 2.4 0 4.5-.5 6.4-1.6 6.4-3.7 8.7-13 6.6-26.1-.4-2.3-.9-4.7-1.5-7.1 2.4-.7 4.7-1.4 6.9-2.3 12.5-4.8 19.3-11.4 19.3-18.8s-6.8-14-19.3-18.8zM92.5 14.7c4.1 2.4 5.5 9.8 3.8 20.3-.3 2.1-.8 4.3-1.4 6.6-5.2-1.2-10.7-2-16.5-2.5-3.4-4.8-6.9-9.1-10.4-13 7.4-7.3 14.9-12.3 21-12.3 1.3 0 2.5.3 3.5.9zM81.3 74c-1.8 3.2-3.9 6.4-6.1 9.6-3.7.3-7.4.4-11.2.4-3.9 0-7.6-.1-11.2-.4-2.2-3.2-4.2-6.4-6-9.6-1.9-3.3-3.7-6.7-5.3-10 1.6-3.3 3.4-6.7 5.3-10 1.8-3.2 3.9-6.4 6.1-9.6 3.7-.3 7.4-.4 11.2-.4 3.9 0 7.6.1 11.2.4 2.2 3.2 4.2 6.4 6 9.6 1.9 3.3 3.7 6.7 5.3 10-1.7 3.3-3.4 6.6-5.3 10zm8.3-3.3c1.5 3.5 2.7 6.9 3.8 10.3-3.4.8-7 1.4-10.8 1.9 1.2-1.9 2.5-3.9 3.6-6 1.2-2.1 2.3-4.2 3.4-6.2zM64 97.8c-2.4-2.6-4.7-5.4-6.9-8.3 2.3.1 4.6.2 6.9.2 2.3 0 4.6-.1 6.9-.2-2.2 2.9-4.5 5.7-6.9 8.3zm-18.6-15c-3.8-.5-7.4-1.1-10.8-1.9 1.1-3.3 2.3-6.8 3.8-10.3 1.1 2 2.2 4.1 3.4 6.1 1.2 2.2 2.4 4.1 3.6 6.1zm-7-25.5c-1.5-3.5-2.7-6.9-3.8-10.3 3.4-.8 7-1.4 10.8-1.9-1.2 1.9-2.5 3.9-3.6 6-1.2 2.1-2.3 4.2-3.4 6.2zM64 30.2c2.4 2.6 4.7 5.4 6.9 8.3-2.3-.1-4.6-.2-6.9-.2-2.3 0-4.6.1-6.9.2 2.2-2.9 4.5-5.7 6.9-8.3zm22.2 21l-3.6-6c3.8.5 7.4 1.1 10.8 1.9-1.1 3.3-2.3 6.8-3.8 10.3-1.1-2.1-2.2-4.2-3.4-6.2zM31.7 35c-1.7-10.5-.3-17.9 3.8-20.3 1-.6 2.2-.9 3.5-.9 6 0 13.5 4.9 21 12.3-3.5 3.8-7 8.2-10.4 13-5.8.5-11.3 1.4-16.5 2.5-.6-2.3-1-4.5-1.4-6.6zM7 64c0-4.7 5.7-9.7 15.7-13.4 2-.8 4.2-1.5 6.4-2.1 1.6 5 3.6 10.3 6 15.6-2.4 5.3-4.5 10.5-6 15.5C15.3 75.6 7 69.6 7 64zm28.5 49.3c-4.1-2.4-5.5-9.8-3.8-20.3.3-2.1.8-4.3 1.4-6.6 5.2 1.2 10.7 2 16.5 2.5 3.4 4.8 6.9 9.1 10.4 13-7.4 7.3-14.9 12.3-21 12.3-1.3 0-2.5-.3-3.5-.9zM96.3 93c1.7 10.5.3 17.9-3.8 20.3-1 .6-2.2.9-3.5.9-6 0-13.5-4.9-21-12.3 3.5-3.8 7-8.2 10.4-13 5.8-.5 11.3-1.4 16.5-2.5.6 2.3 1 4.5 1.4 6.6zm9-15.6c-2 .8-4.2 1.5-6.4 2.1-1.6-5-3.6-10.3-6-15.6 2.4-5.3 4.5-10.5 6-15.5 13.8 4 22.1 10 22.1 15.6 0 4.7-5.8 9.7-15.7 13.4z"/></g></svg>
                   <p className='text-center mt-2 text-lg font-medium text-gray-200' >React</p>
                 </div>
