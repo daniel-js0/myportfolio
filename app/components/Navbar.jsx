@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function Navbar() {
     return(
        <section>
-            <div className="flex justify-between lg:px-16 w-screen h-16 md:h-20 bg-gray-950 bg-opacity-80 backdrop-blur-lg shadow-2xl fixed top-0">
+            <div className="flex z-20 justify-between lg:px-16 w-screen h-16 md:h-20 bg-gray-950 bg-opacity-80 backdrop-blur-lg shadow-md shadow-slate-950 fixed top-0">
            
              <Link href='/'><Image className="md:h-[5.9rem] md:w-[6.5rem] h-20 w-24  md:ml-5 md:pt-3 pt-1" src='/logon.png' width={120} height={90} quality={100}/></Link> 
 
@@ -18,9 +18,9 @@ export default function Navbar() {
                   className="h-12 w-10 -mt-10 text-gray-50"        >  <path fill-rule="evenodd" d="M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8Z"/></svg>
               </div>
 
-              <div className=" h-14 w-[48%] hidden lg:flex justify-evenly items-center my-auto">
+              <div className=" h-14 w-[48%] hidden lg:flex justify-evenly items-center my-auto text-lg">
                 <Link href='/'><p className="text-white ">Home</p></Link>
-                <Link href='/'><p className="text-white ">About</p></Link>
+                <Link href='/about'><p className="text-white ">About</p></Link>
                 <Link href='/'><p className="text-white ">Projects</p></Link>
                 <Link href='/'><p className="text-white ">Contact</p></Link>
 
