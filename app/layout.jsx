@@ -1,4 +1,3 @@
-import { Inter } from 'next/font/google'
 import './globals.css'
 
 
@@ -11,7 +10,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className='bg-[url(/bg-hero.png)] bg-gray-950  w-screen min-h-screen '>
+      <body className='w-screen min-h-screen '>
         
                 {children}
           

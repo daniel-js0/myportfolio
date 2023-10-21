@@ -1,54 +1,50 @@
+import Image from "next/image";
 import Link from "next/link";
-import Footer from "./components/Footer";
-import Navbar from "./components/Navbar";
 
 
 export default function Home() {
   return (
     <main>
-      <Navbar />
+  
    
-     <div className=" w-[89%] lg:w-[80%] mx-auto pt-12 bg-slate-30 ">
-               <p className="text-lg text-teal-500 md:text-xl  font-bold pt-20">Hi there, &#x1F44B; i'm</p>
-               <h1 className="flex text-4xl tracking-wider md:text-7xl font-black text-slate-200 mt-3 md:mt-12 md:tracking-wide">Olagbegi 
-                 <span className="ml-4 flex flex-col text-teal-500 ">Daniel.  <p className="md:w-64 md:h-2 w-32 h-1 mt-4 rounded-full bg-teal-500"></p></span>
-               </h1>
+     <div className=" w-[100%] lg:w-[100%] relative overflow-hidden min-h-screen mx-auto pt-6 bg-neutral-50 ">
+               
+      
+               <Image className='mx-auto mt-2 grayscale  hover:grayscale-0 rounded-full h-40 w-40 md:w-60 md:h-60  border border-blue-700
+                    delay-100 duration-700 hover:scale-105' src='/me.png' width={810} height={510} quality={100}/>
+
+               <h1 className="text-center mt-4 font-sans text-2xl tracking-wider md:text-3xl font-black text-gray-900  md:tracking-wide">Hi there, I'm <span className=" tracking-widest underline underline-offset-8">Olagbegi <span className="text-blue-700">Daniel</span>  </span> </h1>
               
 
-               <h3 className=" text-3xl tracking-wide mt-2 md:text-6xl font-extrabold text-slate-400 md:mt-6 md:tracking-tight">I create web-based projects.</h3>
              
-              <div className="lg:w-[60%] w-[100%] mt-7 bg-slate-20 ">
-                  <p className="text-slate-400 font-semibold md:text-[1.3rem] text-justify md:text-start">I'm a <span className="text-teal-500 font-normal tracking-wide">Frontend Developer</span> ,
+              <div className="lg:w-[70%] w-[90%] mt-5  bg-slate-20 mx-auto">
+                  <p className="text-gray-950 md:text-lg  text-center">I'm a <span className=" text-blue-700 font-bold tracking-wide">Frontend Developer</span> ,
                   with a focus on crafting and deploying dynamic user interfaces and experiences that captivate clients and companies alike. I leverage 
-                  <span className="text-teal-500 font-normal tracking-wide"> cutting-edge technologies</span> and design systems to craft interactive solutions that make a lasting impact. My core goal is to provide top-tier, user-friendly, and sustainable solutions that not only fulfill company requirements but also surpass client expectations. My unwavering dedication to user satisfaction drives me to create smooth and immersive experiences that seamlessly harmonize aesthetic appeal with practical functionality. 
+                  <span className=" text-blue-700 font-bold tracking-wide"> cutting-edge technologies</span> and <span className=" text-blue-700 font-bold tracking-wide"> design systems</span>  to craft interactive solutions that make a lasting impact. 
                 </p>
-              </div>
-              <div className="flex justify-start text-lg">
-                <Link href='/'>
-                  <button className="w-32 h-12 flex justify-center rounded-md bg-slate-800 mt-6">
-                      <p className="text-white my-auto">Hire me </p>
-                      <svg className="text-white h-5 w-5 my-auto ml-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M498.1 5.6c10.1 7 15.4 19.1 13.5 31.2l-64 416c-1.5 9.7-7.4 18.2-16 23s-18.9 5.4-28 1.6L277.3 424.9l-40.1 74.5c-5.2 9.7-16.3 14.6-27 11.9S192 499 192 488V392c0-5.3 1.8-10.5 5.1-14.7L362.4 164.7c2.5-7.1-6.5-14.3-13-8.4L170.4 318.2l-32 28.9 0 0c-9.2 8.3-22.3 10.6-33.8 5.8l-85-35.4C8.4 312.8 .8 302.2 .1 290s5.5-23.7 16.1-29.8l448-256c10.7-6.1 23.9-5.5 34 1.4z" fill="currentColor"></path></svg>
-                  </button>
-                </Link>
+              </div> 
 
-                <Link href='/'>
-                  <button className="w-44 h-12 flex ml-8 justify-center rounded-md bg-slate-800 mt-6">
-                    <p className="text-white my-auto">View resume </p>
-                    <svg className=" text-white h-5 w-5 my-auto ml-3"  width="17" height="17" viewBox="0 0 17 17" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M1.55908 12.0276V12.9095C1.55908 13.6112 1.83782 14.2841 2.33398 14.7803C2.83014 15.2764 3.50307 15.5552 4.20475 15.5552H13.0236C13.7253 15.5552 14.3982 15.2764 14.8944 14.7803C15.3906 14.2841 15.6693 13.6112 15.6693 12.9095V12.0276M12.1417 8.50006L8.61419 12.0276M8.61419 12.0276L5.08664 8.50006M8.61419 12.0276V1.44495" stroke="white" stroke-width="2.64567" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-                  </button>
-                </Link>
-              </div>
+              <Link href='/about'>
+                 <div className="h-12 w-40 mx-auto  mt-6">
+                    <button className="w-40 h-12 flex justify-center rounded-md bg-slate-800">
+                     <p className="text-white font-semibold my-auto">Come along</p>
+                     <svg className="invert h-5 w-5 ml-1.5 mt-4"  xmlns="http://www.w3.org/2000/svg"  fill="currentColor" viewBox="0 0 16 16"><path d="M12.17 9.53c2.307-2.592 3.278-4.684 3.641-6.218.21-.887.214-1.58.16-2.065a3.578 3.578 0 0 0-.108-.563 2.22 2.22 0 0 0-.078-.23V.453c-.073-.164-.168-.234-.352-.295a2.35 2.35 0 0 0-.16-.045 3.797 3.797 0 0 0-.57-.093c-.49-.044-1.19-.03-2.08.188-1.536.374-3.618 1.343-6.161 3.604l-2.4.238h-.006a2.552 2.552 0 0 0-1.524.734L.15 7.17a.512.512 0 0 0 .433.868l1.896-.271c.28-.04.592.013.955.132.232.076.437.16.655.248l.203.083c.196.816.66 1.58 1.275 2.195.613.614 1.376 1.08 2.191 1.277l.082.202c.089.218.173.424.249.657.118.363.172.676.132.956l-.271 1.9a.512.512 0 0 0 .867.433l2.382-2.386c.41-.41.668-.949.732-1.526l.24-2.408Zm.11-3.699c-.797.8-1.93.961-2.528.362-.598-.6-.436-1.733.361-2.532.798-.799 1.93-.96 2.528-.361.599.599.437 1.732-.36 2.531Z"/><path d="M5.205 10.787a7.632 7.632 0 0 0 1.804 1.352c-1.118 1.007-4.929 2.028-5.054 1.903-.126-.127.737-4.189 1.839-5.18.346.69.837 1.35 1.411 1.925Z"/></svg>
+                   </button>
+                 </div>
+             </Link> 
 
-              <Link href='' >
-                <div className="pb-28 text-lg">
-                  <button className="w-40 h-12 flex justify-center rounded-md border border-slate-400 mt-8">
-                    <p className="text-white my-auto">About me</p>
-                    <svg className=" text-white h-5 w-5 my-auto ml-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm80 256h64c44.2 0 80 35.8 80 80c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16c0-44.2 35.8-80 80-80zm96-96c0 35.3-28.7 64-64 64s-64-28.7-64-64s28.7-64 64-64s64 28.7 64 64zm128-32H496c8.8 0 16 7.2 16 16s-7.2 16-16 16H368c-8.8 0-16-7.2-16-16s7.2-16 16-16zm0 64H496c8.8 0 16 7.2 16 16s-7.2 16-16 16H368c-8.8 0-16-7.2-16-16s7.2-16 16-16zm0 64H496c8.8 0 16 7.2 16 16s-7.2 16-16 16H368c-8.8 0-16-7.2-16-16s7.2-16 16-16z" fill="currentColor"></path></svg>
-                  </button>
-                </div>
-              </Link>        
+           
+
+            <Image class="absolute md:-top-24 md:-start-24 max-[780px]:h-32 max-[780px]:w-32 grayscale
+            max-[780px]:-top-10 max-[780px]:-start-14 max-[285px]:hidden" src="/img4.png" alt="side" width={220} height={110} quality={100}/>
+            <Image class="absolute -top-20 -end-24 max-[780px]:h-32 max-[780px]:w-32 grayscale
+            max-[780px]:-top-10 max-[780px]:-end-12 max-[285px]:hidden" src="/img3.png" alt="side" width={220} height={110} quality={100} />
+            <Image class="absolute -bottom-8 -end-12 max-[780px]:h-32 max-[780px]:w-32 grayscale
+            max-[780px]:-bottom-14 max-[780px]:-end-6 max-[285px]:hidden" src="/img1.png" alt="side" width={220} height={110} quality={100}/>
+            <Image class="absolute -bottom-12 -start-20 max-[780px]:h-32 max-[780px]:w-32 grayscale
+            max-[780px]:-bottom-14 max-[780px]:-start-12 max-[285px]:hidden" src="/img2.png" alt="side" width={220} height={110} quality={100}/>      
      </div>
-    <Footer />     
+  
     </main>
   )
 }
