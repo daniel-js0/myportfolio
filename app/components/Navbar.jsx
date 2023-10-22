@@ -1,10 +1,9 @@
-import Image from "next/image";
 import Link from "next/link";
 
 export default function Navbar() {
     return(
        <section>
-            <div className="flex z-20 justify-between lg:px-16 w-screen h-16 md:h-20 bg-gray-50 bg-opacity-30 backdrop-blur-xl  fixed top-0">
+            <div className="flex z-20 justify-between lg:px-16 w-screen h-16 md:h-20 bg-gray-50 dark:bg-neutral-800 dark:bg-opacity-30 dark:backdrop-blur-xl bg-opacity-30 backdrop-blur-xl  fixed top-0">
            
               <Link href='/'>
                 <div className="flex">
@@ -24,7 +23,7 @@ export default function Navbar() {
 
               <div className=" h-14 w-[48%] hidden lg:flex justify-evenly items-center my-auto text-lg">
                 <Link href='/about'><p className="text-whit ">About</p></Link>
-                <Link href='/'><p className="text-whit ">Projects</p></Link>
+                <Link href='/projects'><p className="text-whit ">Projects</p></Link>
                 <Link href='/'><p className="text-whit ">Contact</p></Link>
 
                 <Link href='/'>
