@@ -18,7 +18,7 @@ const Footer = () => {
                     </Link>
                 </div>
 
-                <h1 className="mb-5 tracking-wide">design inspired by <span className="font-bold">Kingslee</span> </h1>
+                <h1 className="mb-5 tracking-wide">design by <span className="font-bold">Me!</span> </h1>
             </div>
 
             <div className="fixed bottom-60 lg:flex hidden">

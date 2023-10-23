@@ -39,7 +39,7 @@ export default function Home() {
                  </div>
              </Link> 
 
-        
+            
             
 
             <Image className="absolute opacity-20 md:-top-24 md:-start-24 max-[760px]:h-32 max-[760px]:w-32 grayscale

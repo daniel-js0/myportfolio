@@ -13,7 +13,7 @@ const page = () => {
   return (
   <main>
     <Navbar />
-       <div className={`w-[100%] min-h-screen `} >
+       <div className={`w-[100%] min-h-screen`} >
           <div className='lg:flex'>
                <div className='w-[89%] h-[35rem] mx-auto pt-5 lg:w-[47%] lg:ml-24 bg-slate-70'>
                
