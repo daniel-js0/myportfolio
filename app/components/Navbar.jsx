@@ -56,7 +56,7 @@ export default function Navbar() {
                 className="h-12 w-10 -mt-10 pb-2 text-gray-800 rotate-45 dark:text-slate-300"        >  <path fill-rule="evenodd" d="M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8Z"/></svg>
         </div>)}
 
-        {offcanvas && (<div className='lg:hidden absolute w-screen min-h-screen mt-[13.9%] min-[539px]:mt-[10%] bg-gray-50 dark:bg-black'>
+        {offcanvas && (<div className='lg:hidden absolute w-screen min-h-screen mt-16 min-[539px]:mt-[10%] bg-gray-50 dark:bg-black'>
           <div>
           <div className='lg:hidden flex flex-col gap-6 mt-10 pt-10'>
                   <Link href="/about" ><h2 className={` text-center font-semibold text-gray-600 dark:text-slate-100`} >About</h2></Link>
