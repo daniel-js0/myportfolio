@@ -41,27 +41,27 @@ export default function Navbar() {
         {/*Mobile View Offcanvas  */}
         {!offcanvas && (<div onClick={handleOffcanvas} className='flex flex-col lg:hidden -mt-0.5 mr-5 ' >
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"  viewBox="0 0 16 16"
-                className={`h-12 w-10 mt-1 text-gray-800 delay-100 duration-500`}        >  <path fill-rule="evenodd" d="M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8Z"/></svg>
+                className={`h-12 w-10 mt-1 text-gray-800 dark:text-slate-300 delay-100 duration-500`}        >  <path fill-rule="evenodd" d="M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8Z"/></svg>
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"  viewBox="0 0 16 16"
-                className="h-12 w-10 -mt-10 text-gray-800"        >  <path fill-rule="evenodd" d="M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8Z"/></svg>
+                className="h-12 w-10 -mt-10 text-gray-800 dark:text-slate-300"        >  <path fill-rule="evenodd" d="M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8Z"/></svg>
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"  viewBox="0 0 16 16"
-                className="h-12 w-10 -mt-10 text-gray-800"        >  <path fill-rule="evenodd" d="M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8Z"/></svg>
+                className="h-12 w-10 -mt-10 text-gray-800 dark:text-slate-300"        >  <path fill-rule="evenodd" d="M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8Z"/></svg>
         </div>)}
         
         {offcanvas && (<div onClick={handleOffcanvas} className='flex flex-col lg:hidden -mt-0.5 mr-5'>
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"  viewBox="0 0 16 16"
-                className={`h-12 w-10 mt-3 pt-2 text-gray-800
+                className={`h-12 w-10 mt-3 pt-2 text-gray-800 dark:text-slate-300
                  ${offcanvas ? '-rotate-45 delay-700 duration-[3000ms]': 'rotate-0'}`}       >  <path fill-rule="evenodd" d="M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8Z"/></svg>
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"  viewBox="0 0 16 16"
-                className="h-12 w-10 -mt-10 pb-2 text-gray-800 rotate-45"        >  <path fill-rule="evenodd" d="M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8Z"/></svg>
+                className="h-12 w-10 -mt-10 pb-2 text-gray-800 rotate-45 dark:text-slate-300"        >  <path fill-rule="evenodd" d="M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8Z"/></svg>
         </div>)}
 
-        {offcanvas && (<div className='lg:hidden absolute w-screen min-h-screen mt-[13.9%] min-[539px]:mt-[10%] bg-gray-50 '>
+        {offcanvas && (<div className='lg:hidden absolute w-screen min-h-screen mt-[13.9%] min-[539px]:mt-[10%] bg-gray-50 dark:bg-black'>
           <div>
           <div className='lg:hidden flex flex-col gap-6 mt-10 pt-10'>
-                  <Link href="/about" ><h2 className={` text-center font-semibold text-gray-600 `} >About</h2></Link>
-                  <Link href="/projects"><h2 className='text-gray-600 font-semibold text-center pt-2' >Projects</h2></Link>
-                  <Link href="/contact"><h2 className='text-gray-600 font-semibold text-center pt-2' >Contact</h2></Link>
+                  <Link href="/about" ><h2 className={` text-center font-semibold text-gray-600 dark:text-slate-100`} >About</h2></Link>
+                  <Link href="/projects"><h2 className='text-gray-600 font-semibold text-center dark:text-slate-100 pt-2' >Projects</h2></Link>
+                  <Link href="/contact"><h2 className='text-gray-600 font-semibold text-center dark:text-slate-100 pt-2' >Contact</h2></Link>
                  
               </div>
         </div> 
