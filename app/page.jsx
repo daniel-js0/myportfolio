@@ -17,14 +17,14 @@ export default function Home() {
                
       
                <Image className='mx-auto mt-2 grayscale  hover:grayscale-0 rounded-full h-40 w-40 md:w-60 md:h-60  border border-blue-700
-                    delay-100 duration-700 hover:scale-105' src='/me.png' width={810} height={510} quality={100}/>
+                    delay-100 duration-700 hover:scale-105' src='/me.png' width={810} height={510} quality={100} alt='view'/>
 
-               <h1 className="text-center mt-4 font-sans px-4 text-2xl  md:text-3xl font-bold text-neutral-800 dark:text-gray-200  ">Hi there, I'm <span className=" font-black text-black dark:text-white tracking-widest underline underline-offset-8">Olagbegi <span className="text-blue-700">Daniel</span>  </span> </h1>
+               <h1 className="text-center mt-4 font-sans px-4 text-2xl  md:text-3xl font-bold text-neutral-800 dark:text-gray-200  ">Hi there, I am <span className=" font-black text-black dark:text-white tracking-widest underline underline-offset-8">Olagbegi <span className="text-blue-700">Daniel</span>  </span> </h1>
               
 
              
               <div className="lg:w-[70%] w-[90%] mt-5  bg-slate-20 mx-auto">
-                  <p className="text-gray-800 dark:text-gray-200 md:text-lg  text-center">I'm a <span className=" text-blue-700 font-bold tracking-wide">Frontend Developer</span> ,
+                  <p className="text-gray-800 dark:text-gray-200 md:text-lg  text-center">I am a <span className=" text-blue-700 font-bold tracking-wide">Frontend Developer</span> ,
                   with a focus on crafting and deploying dynamic user interfaces and experiences that captivate clients and companies alike. I leverage 
                   <span className=" text-blue-700 font-bold tracking-wide"> cutting-edge technologies</span> and <span className=" text-blue-700 font-bold tracking-wide"> design systems</span>  to craft interactive solutions that make a lasting impact. 
                 </p>
