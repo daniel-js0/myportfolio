@@ -13,7 +13,7 @@ export default function Home() {
     <main>
   
    
-     <div className={ `w-[100%] lg:w-[100%] relative overflow-hidden min-h-screen mx-auto max-[376px]:pt-16 pt-44 md:pt-64 lg:pt-6 `}>
+     <div className={ `w-[100%] lg:w-[100%] relative overflow-hidden min-h-screen mx-auto max-[376px]:pt-16 pt-36 md:pt-64 lg:pt-6 `}>
                
       
                <Image className='mx-auto mt-2 grayscale  hover:grayscale-0 rounded-full h-40 w-40 md:w-60 md:h-60  border border-blue-700
