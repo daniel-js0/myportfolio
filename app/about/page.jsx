@@ -7,7 +7,7 @@ import { useEffect, useState } from 'react'
 
 
 
-const page = () => {
+const About = () => {
           const [isVisible, setIsVisible] = useState(false);
           const [showElement, setShowElement] = useState(false);
 
@@ -147,4 +147,4 @@ const page = () => {
   )
 }
 
-export default page
+export default About;
