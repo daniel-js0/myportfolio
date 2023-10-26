@@ -1,13 +1,41 @@
-
+"use client"
 import Navbar from '../components/Navbar'
 import Image from 'next/image'
 import Footer from '../components/Footer'
+import { useEffect, useState } from 'react'
 
 
 
 
 const page = () => {
-      
+          const [isVisible, setIsVisible] = useState(false);
+          const [showElement, setShowElement] = useState(false);
+
+        
+          useEffect(() => {
+            setIsVisible(true);
+
+            const handleScroll = () => {
+              if (isElementInView()) {
+                setShowElement(true);
+              }
+            };
+        
+            window.addEventListener('scroll', handleScroll);
+        
+            return () => {
+              window.removeEventListener('scroll', handleScroll);
+            };
+          }, []);
+        
+          const isElementInView = () => {
+            const element = document.querySelector('.scroll-fade-in');
+            if (!element) return false;
+        
+            const rect = element.getBoundingClientRect();
+            return rect.top <= window.innerHeight - 100;
+          };
+        
          
        
   return (
@@ -17,17 +45,18 @@ const page = () => {
           <div className='lg:flex'>
                <div className='w-[89%] h-[35rem] mx-auto pt-5 lg:w-[47%] lg:ml-24 bg-slate-70'>
                
-               <h1 className="text-center mt-32 font-sans text-2xl tracking-wider md:text-3xl font-black md:tracking-wide"><span className=" tracking-widest underline underline-offset-8">About <span className="text-blue-700">Me!</span>  </span> </h1>
+               <h1 className={`text-center mt-32 font-sans text-2xl tracking-wider md:text-3xl font-black md:tracking-wide
+                delay-100 duration-300 ${isVisible ? 'translate-y-0 opacity-100' : ' translate-y-12 opacity-0'}`}><span className=" tracking-widest underline underline-offset-8">About <span className="text-blue-700">Me!</span>  </span> </h1>
                
                 <div className=" w-[100%] mt-7 bg-slate-20 ">
-                   <p className='text-slate-900 dark:text-slate-100  md:text-xl  text-center' >  I am a seasoned Frontend developer possessing a unique combination of technical expertise and creative ingenuity. Demonstrated proficiency in creating and crafting web applications focused on user needs, yielding tangible business outcomes. Devoted to the field of software engineering and dedicated to finding effective solutions. A team player who excels in fast-paced, 
+                   <p className={`text-slate-900 dark:text-slate-100  md:text-xl  text-center  delay-300 duration-700 ${isVisible ? 'translate-y-0 opacity-100' : ' translate-y-12 opacity-0'}`} >  I am a seasoned Frontend developer possessing a unique combination of technical expertise and creative ingenuity. Demonstrated proficiency in creating and crafting web applications focused on user needs, yielding tangible business outcomes. Devoted to the field of software engineering and dedicated to finding effective solutions. A team player who excels in fast-paced, 
                    ever-changing settings and readily embraces novel challenges.My core goal is to provide top-tier, user-friendly, and sustainable solutions that not only fulfill company requirements but also surpass client expectations. My unwavering dedication to user satisfaction drives me to create smooth and immersive experiences that seamlessly harmonize aesthetic appeal with practical functionality. </p>
                 </div>
                </div>
 
             
                <div className='h-[23rem] w-[23rem] mx-auto lg:ml-0 bg-slate-30 relative mt-28 md:mt-7 lg:mt-60 lg:mr-16 xl:mr-40 '>
-                    <Image  className='rounded-full h-[90%] w-[90%] mx-auto' 
+                    <Image  className={`rounded-full h-[90%] w-[90%] mx-auto  delay-300 duration-700 ${isVisible ? 'scale-100 opacity-100' : 'scale-0 opacity-0'}`} 
                       src='/me1.jpg' width={810} height={510} quality={100} alt='view'/>
                     
                     <svg className='dark:invert absolute top-0 -start-24 hidden lg:flex' xmlns="http://www.w3.org/2000/svg" width="131" height="97" viewBox="0 0 131 97" fill="none">
@@ -40,15 +69,17 @@ const page = () => {
 
           <div className='mt-16'>
                <h1 className='font-black text-2xl lg:text-4xl text-center '>Technologies that I Use </h1>
-               <p className='text-gray-500 font-semibold text-lg lg:text-xl text-center mt-3'> Here are some technologies i am using or have used recently</p>
+               <p className='text-gray-500 px-5 font-semibold text-lg lg:text-xl text-center mt-3'> Here are some technologies i am using or have used recently</p>
           </div>
              
           <div className='w-[19rem] md:w-[34rem] mb-32  h-[26.5rem] lg:w-[45.5rem]  md:h-[47rem] lg:h-[35.5rem] mx-auto mt-12 '>
               <div className=' w-[100%] h-[100%] mx-auto  grid max-[283px]:grid-col-2 grid-cols-3 lg:grid-cols-4 items-center justify-items-center '>
 
-                <div className=' h-24 w-24 md:w-44 md:h-44 grayscale hover:grayscale-0 lg:delay-100 lg:duration-700  bg-gray-700  hover:scale-110 '>
-                  <svg className='w-12 h-12 mx-auto pt-3  md:p-0 md:mt-6' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><g fill="#61DAFB"><circle cx="64" cy="64" r="11.4"/><path d="M107.3 45.2c-2.2-.8-4.5-1.6-6.9-2.3.6-2.4 1.1-4.8 1.5-7.1 2.1-13.2-.2-22.5-6.6-26.1-1.9-1.1-4-1.6-6.4-1.6-7 0-15.9 5.2-24.9 13.9-9-8.7-17.9-13.9-24.9-13.9-2.4 0-4.5.5-6.4 1.6-6.4 3.7-8.7 13-6.6 26.1.4 2.3.9 4.7 1.5 7.1-2.4.7-4.7 1.4-6.9 2.3C8.2 50 1.4 56.6 1.4 64s6.9 14 19.3 18.8c2.2.8 4.5 1.6 6.9 2.3-.6 2.4-1.1 4.8-1.5 7.1-2.1 13.2.2 22.5 6.6 26.1 1.9 1.1 4 1.6 6.4 1.6 7.1 0 16-5.2 24.9-13.9 9 8.7 17.9 13.9 24.9 13.9 2.4 0 4.5-.5 6.4-1.6 6.4-3.7 8.7-13 6.6-26.1-.4-2.3-.9-4.7-1.5-7.1 2.4-.7 4.7-1.4 6.9-2.3 12.5-4.8 19.3-11.4 19.3-18.8s-6.8-14-19.3-18.8zM92.5 14.7c4.1 2.4 5.5 9.8 3.8 20.3-.3 2.1-.8 4.3-1.4 6.6-5.2-1.2-10.7-2-16.5-2.5-3.4-4.8-6.9-9.1-10.4-13 7.4-7.3 14.9-12.3 21-12.3 1.3 0 2.5.3 3.5.9zM81.3 74c-1.8 3.2-3.9 6.4-6.1 9.6-3.7.3-7.4.4-11.2.4-3.9 0-7.6-.1-11.2-.4-2.2-3.2-4.2-6.4-6-9.6-1.9-3.3-3.7-6.7-5.3-10 1.6-3.3 3.4-6.7 5.3-10 1.8-3.2 3.9-6.4 6.1-9.6 3.7-.3 7.4-.4 11.2-.4 3.9 0 7.6.1 11.2.4 2.2 3.2 4.2 6.4 6 9.6 1.9 3.3 3.7 6.7 5.3 10-1.7 3.3-3.4 6.6-5.3 10zm8.3-3.3c1.5 3.5 2.7 6.9 3.8 10.3-3.4.8-7 1.4-10.8 1.9 1.2-1.9 2.5-3.9 3.6-6 1.2-2.1 2.3-4.2 3.4-6.2zM64 97.8c-2.4-2.6-4.7-5.4-6.9-8.3 2.3.1 4.6.2 6.9.2 2.3 0 4.6-.1 6.9-.2-2.2 2.9-4.5 5.7-6.9 8.3zm-18.6-15c-3.8-.5-7.4-1.1-10.8-1.9 1.1-3.3 2.3-6.8 3.8-10.3 1.1 2 2.2 4.1 3.4 6.1 1.2 2.2 2.4 4.1 3.6 6.1zm-7-25.5c-1.5-3.5-2.7-6.9-3.8-10.3 3.4-.8 7-1.4 10.8-1.9-1.2 1.9-2.5 3.9-3.6 6-1.2 2.1-2.3 4.2-3.4 6.2zM64 30.2c2.4 2.6 4.7 5.4 6.9 8.3-2.3-.1-4.6-.2-6.9-.2-2.3 0-4.6.1-6.9.2 2.2-2.9 4.5-5.7 6.9-8.3zm22.2 21l-3.6-6c3.8.5 7.4 1.1 10.8 1.9-1.1 3.3-2.3 6.8-3.8 10.3-1.1-2.1-2.2-4.2-3.4-6.2zM31.7 35c-1.7-10.5-.3-17.9 3.8-20.3 1-.6 2.2-.9 3.5-.9 6 0 13.5 4.9 21 12.3-3.5 3.8-7 8.2-10.4 13-5.8.5-11.3 1.4-16.5 2.5-.6-2.3-1-4.5-1.4-6.6zM7 64c0-4.7 5.7-9.7 15.7-13.4 2-.8 4.2-1.5 6.4-2.1 1.6 5 3.6 10.3 6 15.6-2.4 5.3-4.5 10.5-6 15.5C15.3 75.6 7 69.6 7 64zm28.5 49.3c-4.1-2.4-5.5-9.8-3.8-20.3.3-2.1.8-4.3 1.4-6.6 5.2 1.2 10.7 2 16.5 2.5 3.4 4.8 6.9 9.1 10.4 13-7.4 7.3-14.9 12.3-21 12.3-1.3 0-2.5-.3-3.5-.9zM96.3 93c1.7 10.5.3 17.9-3.8 20.3-1 .6-2.2.9-3.5.9-6 0-13.5-4.9-21-12.3 3.5-3.8 7-8.2 10.4-13 5.8-.5 11.3-1.4 16.5-2.5.6 2.3 1 4.5 1.4 6.6zm9-15.6c-2 .8-4.2 1.5-6.4 2.1-1.6-5-3.6-10.3-6-15.6 2.4-5.3 4.5-10.5 6-15.5 13.8 4 22.1 10 22.1 15.6 0 4.7-5.8 9.7-15.7 13.4z"/></g></svg>
-                  <p className='text-center mt-4 md:mt-12  md:text-xl font-medium text-gray-200' >React</p>
+                <div className=' h-24 w-24 md:w-44 md:h-44 grayscale hover:grayscale-0 lg:delay-100 lg:duration-700  bg-gray-700  hover:scale-110'>
+            
+                  <svg className={`scroll-fade-in w-12 h-12 mx-auto pt-3  md:p-0 md:mt-6
+                   delay-100 duration-300 ${showElement ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}`} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><g fill="#61DAFB"><circle cx="64" cy="64" r="11.4"/><path d="M107.3 45.2c-2.2-.8-4.5-1.6-6.9-2.3.6-2.4 1.1-4.8 1.5-7.1 2.1-13.2-.2-22.5-6.6-26.1-1.9-1.1-4-1.6-6.4-1.6-7 0-15.9 5.2-24.9 13.9-9-8.7-17.9-13.9-24.9-13.9-2.4 0-4.5.5-6.4 1.6-6.4 3.7-8.7 13-6.6 26.1.4 2.3.9 4.7 1.5 7.1-2.4.7-4.7 1.4-6.9 2.3C8.2 50 1.4 56.6 1.4 64s6.9 14 19.3 18.8c2.2.8 4.5 1.6 6.9 2.3-.6 2.4-1.1 4.8-1.5 7.1-2.1 13.2.2 22.5 6.6 26.1 1.9 1.1 4 1.6 6.4 1.6 7.1 0 16-5.2 24.9-13.9 9 8.7 17.9 13.9 24.9 13.9 2.4 0 4.5-.5 6.4-1.6 6.4-3.7 8.7-13 6.6-26.1-.4-2.3-.9-4.7-1.5-7.1 2.4-.7 4.7-1.4 6.9-2.3 12.5-4.8 19.3-11.4 19.3-18.8s-6.8-14-19.3-18.8zM92.5 14.7c4.1 2.4 5.5 9.8 3.8 20.3-.3 2.1-.8 4.3-1.4 6.6-5.2-1.2-10.7-2-16.5-2.5-3.4-4.8-6.9-9.1-10.4-13 7.4-7.3 14.9-12.3 21-12.3 1.3 0 2.5.3 3.5.9zM81.3 74c-1.8 3.2-3.9 6.4-6.1 9.6-3.7.3-7.4.4-11.2.4-3.9 0-7.6-.1-11.2-.4-2.2-3.2-4.2-6.4-6-9.6-1.9-3.3-3.7-6.7-5.3-10 1.6-3.3 3.4-6.7 5.3-10 1.8-3.2 3.9-6.4 6.1-9.6 3.7-.3 7.4-.4 11.2-.4 3.9 0 7.6.1 11.2.4 2.2 3.2 4.2 6.4 6 9.6 1.9 3.3 3.7 6.7 5.3 10-1.7 3.3-3.4 6.6-5.3 10zm8.3-3.3c1.5 3.5 2.7 6.9 3.8 10.3-3.4.8-7 1.4-10.8 1.9 1.2-1.9 2.5-3.9 3.6-6 1.2-2.1 2.3-4.2 3.4-6.2zM64 97.8c-2.4-2.6-4.7-5.4-6.9-8.3 2.3.1 4.6.2 6.9.2 2.3 0 4.6-.1 6.9-.2-2.2 2.9-4.5 5.7-6.9 8.3zm-18.6-15c-3.8-.5-7.4-1.1-10.8-1.9 1.1-3.3 2.3-6.8 3.8-10.3 1.1 2 2.2 4.1 3.4 6.1 1.2 2.2 2.4 4.1 3.6 6.1zm-7-25.5c-1.5-3.5-2.7-6.9-3.8-10.3 3.4-.8 7-1.4 10.8-1.9-1.2 1.9-2.5 3.9-3.6 6-1.2 2.1-2.3 4.2-3.4 6.2zM64 30.2c2.4 2.6 4.7 5.4 6.9 8.3-2.3-.1-4.6-.2-6.9-.2-2.3 0-4.6.1-6.9.2 2.2-2.9 4.5-5.7 6.9-8.3zm22.2 21l-3.6-6c3.8.5 7.4 1.1 10.8 1.9-1.1 3.3-2.3 6.8-3.8 10.3-1.1-2.1-2.2-4.2-3.4-6.2zM31.7 35c-1.7-10.5-.3-17.9 3.8-20.3 1-.6 2.2-.9 3.5-.9 6 0 13.5 4.9 21 12.3-3.5 3.8-7 8.2-10.4 13-5.8.5-11.3 1.4-16.5 2.5-.6-2.3-1-4.5-1.4-6.6zM7 64c0-4.7 5.7-9.7 15.7-13.4 2-.8 4.2-1.5 6.4-2.1 1.6 5 3.6 10.3 6 15.6-2.4 5.3-4.5 10.5-6 15.5C15.3 75.6 7 69.6 7 64zm28.5 49.3c-4.1-2.4-5.5-9.8-3.8-20.3.3-2.1.8-4.3 1.4-6.6 5.2 1.2 10.7 2 16.5 2.5 3.4 4.8 6.9 9.1 10.4 13-7.4 7.3-14.9 12.3-21 12.3-1.3 0-2.5-.3-3.5-.9zM96.3 93c1.7 10.5.3 17.9-3.8 20.3-1 .6-2.2.9-3.5.9-6 0-13.5-4.9-21-12.3 3.5-3.8 7-8.2 10.4-13 5.8-.5 11.3-1.4 16.5-2.5.6 2.3 1 4.5 1.4 6.6zm9-15.6c-2 .8-4.2 1.5-6.4 2.1-1.6-5-3.6-10.3-6-15.6 2.4-5.3 4.5-10.5 6-15.5 13.8 4 22.1 10 22.1 15.6 0 4.7-5.8 9.7-15.7 13.4z"/></g></svg>
+                  <p className={`text-center mt-4 md:mt-12  md:text-xl font-medium text-gray-200 delay-300 duration-700 ${showElement ? ' translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}`} >React</p>
                 </div>
 
                 <div className=' h-24 w-24 md:w-44 md:h-44 grayscale bg-gray-700 lg:delay-100 lg:duration-700   hover:z-10 hover:grayscale-0 hover:scale-110 '>

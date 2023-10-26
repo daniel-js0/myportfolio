@@ -1,22 +1,32 @@
-import React from 'react'
+"use client"
 import Navbar from '../components/Navbar';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
 
 const Projects = () => {
+            const [isVisible, setIsVisible] = useState(false);
+
+            useEffect(() => {
+              setIsVisible(true);
+            }, [])
+            
+   
   return (
   <main>
     <Navbar/>
         <div className='w-[89%] h-[15rem] mx-auto pt-5 bg-slate-70'>  
-              <h1 className="text-center mt-32 font-sans text-2xl tracking-wider md:text-3xl font-black md:tracking-wide"><span className=" tracking-widest underline underline-offset-8">My <span className="text-blue-700">Projects</span>  </span> </h1>
+              <h1 className={`text-center mt-32 font-sans text-2xl tracking-wider md:text-3xl font-black md:tracking-wide  delay-100 duration-300 ${isVisible ? 'translate-y-0 opacity-100' : ' translate-y-12 opacity-0'} 
+              `}><span className=" tracking-widest underline underline-offset-8">My <span className="text-blue-700">Projects</span>  </span> </h1>
                
-             <div className=" w-[100%] mt-7 bg-slate-20 ">
+             <div className={` w-[100%] mt-7 bg-slate-20  delay-200 duration-500 ${isVisible ? 'translate-y-0 opacity-100' : ' translate-y-12 opacity-0'} `}>
                    <p className='text-slate-900 dark:text-slate-100  md:text-xl  text-center' >  Here are a few of the projects i worked on</p>
              </div>
         </div>
           
         {/* projects  */}
-        <div className='mt-14 mb-52 relative w-[88%] lg:w-[75%] xl:w-[70%] max-[281px]:h-[34rem] h-[26rem]   bg-transparent dark:bg-transparet lg:shadow-none dark:shadow shadow-lg shadow-gray-400 mx-auto overflow-hidden lg:rounded-none rounded-md'>
+        <div className={`mt-14 mb-52 relative w-[88%] lg:w-[75%] xl:w-[70%] max-[281px]:h-[34rem] h-[26rem]   bg-transparent dark:bg-transparet lg:shadow-none dark:shadow shadow-lg shadow-gray-400 mx-auto overflow-hidden lg:rounded-none rounded-md
+         delay-300 duration-700 ${isVisible ? 'translate-y-0 opacity-100' : ' translate-y-12 opacity-0'} `}>
           
           <div className='absolute w-[100%] h-[100%] xl:w-[50%] xl:start-0 bg-gray-200 bg-opacity-60 backdrop-blur-sm z-10 
            dark:bg-neutral-900 dark:bg-opacity-70 xl:backdrop-blur-[2px] lg:hover:backdrop-blur-none lg:hover:bg-transparent cursor-pointer'>
