@@ -15,7 +15,7 @@ const ThemeButton = () => {
   return (
    
     <button className='fixed z-20  h-14 w-16 rounded-r-full lg:bottom-16 md:bottom-64 lg:start-5 lg:h-12 lg:w-12 lg:rounded-full max-[760px]:bottom-32 
-      bg-gray-300 dark:bg-neutral-800 bg-opacity-30 backdrop-blur-xl dark:bg-opacity-30 dark:backdrop-blur-xl' onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}>
+      bg-gray-300 dark:bg-neutral-300 bg-opacity-30 backdrop-blur-sm dark:bg-opacity-30 dark:backdrop-blur-sm' onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}>
         {resolvedTheme === 'dark' ? 
 
         (<svg 

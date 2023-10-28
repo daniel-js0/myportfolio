@@ -16,8 +16,8 @@ export default function Home() {
     
   return (
     <main>
-   
-     <div className={ `w-[100%] lg:w-[100%] relative overflow-hidden min-h-screen mx-auto max-[376px]:pt-16 pt-36 md:pt-64 lg:pt-6 `}>
+   {/* max-[376px]:pt-16 pt-36 md:pt-64 lg:pt-6  */}
+     <div className={ `w-[100%] lg:w-[100%] relative overflow-hidden min-h-screen mx-auto flex flex-col justify-center`}>
                 
                <Image className={`mx-auto mt-2 grayscale  hover:grayscale-0 rounded-full h-40 w-40 md:w-60 md:h-60  border border-blue-700
                     delay-100 duration-300 hover:scale-105 ${isVisible ? 'translate-y-0 opacity-100' : ' translate-y-12 opacity-0'} `}
