@@ -29,7 +29,7 @@ const Projects = () => {
          delay-300 duration-700 ${isVisible ? 'translate-y-0 opacity-100' : ' translate-y-12 opacity-0'} `}>
           
           <div className='absolute w-[100%] h-[100%] xl:w-[50%] xl:start-0 bg-gray-200 bg-opacity-60 backdrop-blur-sm z-10 
-           dark:bg-neutral-900 dark:bg-opacity-70 xl:backdrop-blur-[2px] lg:hover:backdrop-blur-none lg:hover:bg-transparent cursor-pointer'>
+           dark:bg-neutral-900 dark:bg-opacity-70 xl:backdrop-blur-[2px] lg:hover:backdrop-blur-[1px] lg:hover:bg-transparent cursor-pointer'>
              
               <p className=' absolute top-8 px-2 font-extrabold md:end-6 xl:-end-[28rem] text-2xl ml-5 text-gray-800 dark:text-gray-100'>Piggyvest Clone</p>
              
@@ -61,7 +61,7 @@ const Projects = () => {
         <div className='mt-44 mb-52  relative w-[88%] lg:w-[75%] xl:w-[70%] max-[281px]:h-[34rem] h-[26rem]   bg-transparent dark:bg-transparet lg:shadow-none dark:shadow shadow-lg shadow-gray-400 mx-auto overflow-hidden lg:rounded-none rounded-md'>
          
           <div className='absolute w-[100%] h-[100%] xl:w-[50%] xl:end-0 bg-gray-100 bg-opacity-30 backdrop-blur-sm z-10 
-           dark:bg-neutral-900 dark:bg-opacity-70 xl:backdrop-blur-[2px] lg:hover:backdrop-blur-none lg:hover:bg-transparent cursor-pointer'>
+           dark:bg-neutral-900 dark:bg-opacity-70 xl:backdrop-blur-[2px] lg:hover:backdrop-blur-[1px]  lg:hover:bg-transparent cursor-pointer'>
               
               <p className=' absolute top-8 px-2 font-extrabold xl:-start-[28rem] text-2xl ml-5 text-gray-800 dark:text-gray-100'>Todo App</p>
              
@@ -94,7 +94,7 @@ const Projects = () => {
         <div className='mt-44 mb-52 relative w-[88%] lg:w-[75%] xl:w-[70%] max-[281px]:h-[34rem] h-[26rem]   bg-transparent dark:bg-transparet lg:shadow-none dark:shadow shadow-lg shadow-gray-400 mx-auto overflow-hidden lg:rounded-none rounded-md'>
           
           <div className='absolute w-[100%] h-[100%] xl:w-[50%] xl:start-0 bg-gray-200 bg-opacity-60 backdrop-blur-sm z-10 
-           dark:bg-neutral-900 dark:bg-opacity-70 xl:backdrop-blur-[2px] lg:hover:backdrop-blur-none lg:hover:bg-transparent cursor-pointer'>
+           dark:bg-neutral-900 dark:bg-opacity-70 xl:backdrop-blur-[2px] lg:hover:backdrop-blur-[1px]  lg:hover:bg-transparent cursor-pointer'>
              
               <p className=' absolute top-8 px-2 font-extrabold md:end-6 xl:-end-[28rem] text-2xl ml-5 text-gray-800 dark:text-gray-100'>Calculator App</p>
              
@@ -126,7 +126,7 @@ const Projects = () => {
         <div className='mt-44 mb-52 relative w-[88%] lg:w-[75%] xl:w-[70%] max-[281px]:h-[34rem] h-[26rem]   bg-transparent dark:bg-transparet lg:shadow-none dark:shadow shadow-lg shadow-gray-400 mx-auto overflow-hidden lg:rounded-none rounded-md'>
           
           <div className='absolute w-[100%] h-[100%] xl:w-[50%] xl:end-0 bg-gray-200 bg-opacity-60 backdrop-blur-sm z-10 
-           dark:bg-neutral-900 dark:bg-opacity-70 xl:backdrop-blur-[2px] lg:hover:backdrop-blur-none lg:hover:bg-transparent cursor-pointer'>
+           dark:bg-neutral-900 dark:bg-opacity-70 xl:backdrop-blur-[2px] lg:hover:backdrop-blur-[1px]  lg:hover:bg-transparent cursor-pointer'>
              
               <p className=' absolute top-8 px-2 font-extrabold xl:-start-[28rem] text-2xl ml-5 text-gray-800 dark:text-gray-100'>Form Field</p>
              
