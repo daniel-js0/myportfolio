@@ -20,7 +20,7 @@ const Projects = () => {
               `}><span className=" tracking-widest underline underline-offset-8">My <span className="text-blue-700">Projects</span>  </span> </h1>
                
              <div className={` w-[100%] mt-7 bg-slate-20  delay-200 duration-500 ${isVisible ? 'translate-y-0 opacity-100' : ' translate-y-12 opacity-0'} `}>
-                   <p className='text-slate-900 dark:text-slate-100  md:text-xl  text-center' >  Here are a few of the projects i worked on</p>
+                   <p className='text-slate-900 dark:text-slate-200  md:text-xl  text-center' >  Here are a few of the projects i worked on</p>
              </div>
         </div>
           
