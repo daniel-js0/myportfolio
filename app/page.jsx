@@ -29,7 +29,7 @@ export default function Home() {
 
              
               <div className="lg:w-[70%] w-[90%] mt-5  bg-slate-20 mx-auto">
-                  <p className={`text-gray-800 dark:text-gray-200 md:text-lg  text-center 
+                  <p className={`text-gray-800 dark:text-gray-300 md:text-lg  text-center 
                   delay-500 duration-700 ${isVisible ? 'translate-y-0 opacity-100' : ' translate-y-12 opacity-0'} `}>I am a <span className=" text-blue-700 font-bold tracking-wide">Frontend Developer</span> ,
                   with a focus on crafting and deploying dynamic user interfaces and experiences that captivate clients and companies alike. I leverage 
                   <span className=" text-blue-700 font-bold tracking-wide"> cutting-edge technologies</span> and <span className=" text-blue-700 font-bold tracking-wide"> design systems</span>  to craft interactive solutions that make a lasting impact. 
