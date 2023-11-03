@@ -4,6 +4,7 @@ import Footer from "../components/Footer"
 import Navbar from "../components/Navbar"
 
 
+
 const Contact = () => {
               const [isVisible, setIsVisible] = useState(false);
 
@@ -40,6 +41,10 @@ const Contact = () => {
         delay-300 duration-700 ${isVisible ? 'translate-y-0 opacity-100' : ' translate-y-12 opacity-0'}`}
         placeholder="what do you have for me/ offer?"
         />
+
+        <a href="mailto:danielolagbegi1@gmail.com"> 
+          hello
+        </a>
 
         
         <button className={`w-[100%] h-16 bg-blue-800 rounded-lg mt-7 text-xl font-bold text-slate-200
