@@ -54,7 +54,7 @@ const Projects = () => {
           
             <Image className=' absolute hidden md:flex xl:hidden top-0 h-[100%] w-[100%]  mx-auto' 
                         src='/piggyvest2.png' width={810} height={510} quality={100} alt='view'/> 
-            <Image className=' absolute md:hidden xl:flex top-0 h-[100%] w-[100%] xl:w-[50%] start-0 z-0 mx-auto' 
+            <Image className=' absolute md:hidden rounded-xl  xl:flex top-0 h-[100%] w-[100%] xl:w-[50%] start-0 z-0 mx-auto' 
                         src='/piggyvest.png' width={810} height={510} quality={100} alt='view'/> 
         </div>
 
