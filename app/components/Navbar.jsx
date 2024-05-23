@@ -30,13 +30,13 @@ export default function Navbar() {
               <div className=" h-14 w-[43%] hidden lg:flex justify-evenly items-center my-auto text-lg">
                <div>
                <Link href='/about' onMouseEnter={() => handleHover('about')} onMouseLeave={() => handleHover('')}>
-                  <p className={`font-semibold ${hover === "about" && 'text-blue-600 scale-105 delay-100 duration-500'}`}>About</p></Link>
+                  <p className={`font-semibold ${hover === "about" && 'text-blue-700'}`}>About</p></Link>
                   <div className={`h-[0.17rem]  bg-blue-700 ${hover === "about" ? 'w-[3.1rem] delay-100 duration-500' : 'w-0 delay-100 duration-500'}`}></div>
                </div>
 
                <div>
                <Link href='/projects' onMouseEnter={() => handleHover('projects')} onMouseLeave={() => handleHover('')}>
-                  <p className="font-semibold ">Projects</p></Link>
+                  <p className={`font-semibold ${hover === "projects" && 'text-blue-700'}`}>Projects</p></Link>
                   <div className={`h-[0.17rem]  bg-blue-700 ${hover === "projects" ? 'w-[3.9rem] delay-100 duration-500' : 'w-0 delay-100 duration-500'}`}></div>
                </div>
                 
