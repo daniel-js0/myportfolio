@@ -39,6 +39,12 @@ export default function Navbar() {
                   <p className={`font-semibold ${hover === "projects" && 'text-blue-700'}`}>Projects</p></Link>
                   <div className={`h-[0.17rem]  bg-blue-700 ${hover === "projects" ? 'w-[3.9rem] delay-100 duration-500' : 'w-0 delay-100 duration-500'}`}></div>
                </div>
+
+               <div>
+               <Link href='/contact' onMouseEnter={() => handleHover('contact')} onMouseLeave={() => handleHover('')}>
+                  <p className={`font-semibold ${hover === "projects" && 'text-blue-700'}`}>Contact</p></Link>
+                  <div className={`h-[0.17rem]  bg-blue-700 ${hover === "contact" ? 'w-[3.9rem] delay-100 duration-500' : 'w-0 delay-100 duration-500'}`}></div>
+               </div>
                 
 
                 <Link href='/contact'><p className="font-semibold ">Contact</p></Link>
